@@ -1,0 +1,1 @@
+puts 'HelloWorld' # puts - вывод в консоль.
