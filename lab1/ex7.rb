@@ -1,4 +1,3 @@
-
 def summ_of_num(num)
 	a = num.to_i
 	sum = 0
@@ -105,12 +104,33 @@ def metod3(num)
 	return sum
 end
 
-puts "Введите число: "
-num = gets.chomp
-puts "Найти количество делителей числа, не делящихся на 3."
-print metod1(num), "\n"
-puts "Найти минимальную нечетную цифру числа."
-print metod2(num), "\n"
-puts "Найти сумму всех делителей числа, взаимно простых с суммой
-цифр числа и не взаимно простых с произведением цифр числа."
-print metod3(num), "\n"
+
+
+input_command = gets.chomp
+case period
+	when "summ"
+		a = gets.chomp
+		print "Сумма цифр числа: ", summ_of_num(a),"\n"
+	when "mult"
+		a = gets.chomp
+		print "Произведение цифр числа: ", multiplication_of_num(a),"\n"
+	when "min"
+		a = gets.chomp
+		print "Минимальная цифра числа: ", min_of_num(a),"\n"
+	when "max"
+		a = gets.chomp
+		print "Максимальная цифра числа: ", max_of_num(a),"\n"
+	when "m1"
+		a = gets.chomp
+		print "Количество делителей числа, не делящихся на 3: ", metod1(a),"\n"
+	when "m2"
+		a = gets.chomp
+		print "Минимальная нечетная цифра числа: ", metod2(a),"\n"
+	when "m3"
+		a = gets.chomp
+		print "Сумму всех делителей числа, взаимно простых с суммой
+цифр числа и не взаимно простых с произведением цифр числа: ", metod3(a),"\n"
+	when "-h"
+		puts "Команды: summ, mult, min, max, m1, m2, m3"
+	else
+		puts "Hello World!"
