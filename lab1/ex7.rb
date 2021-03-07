@@ -1,7 +1,8 @@
+
 def summ_of_num(num)
 	a = num.to_i
 	sum = 0
-	while a > 0
+	while a > 0		
 		sum += a%10
 		a/=10
 		#puts a
@@ -79,9 +80,37 @@ def metod2(num)
 	end
 end
 
+def gcd(a, b)
+    if (b == 0)
+        return a
+   	else
+       	return gcd(b, a % b)
+    end
+end
+
+
+def metod3(num)
+	a = num.to_i
+	sum = 0
+	suma_cifr = summ_of_num(a)
+	proizv_cifr = multiplication_of_num(a)
+	for i in 2..(a/2)+1
+		if a % i == 0
+			#print a, ":", i,":", gcd(i, suma_cifr), ":", gcd(i, proizv_cifr), "\n"
+			if gcd(i, suma_cifr) == 1 and gcd(i, proizv_cifr) > 1
+				sum += i
+			end
+		end
+	end
+	return sum
+end
+
 puts "Введите число: "
 num = gets.chomp
 puts "Найти количество делителей числа, не делящихся на 3."
 print metod1(num), "\n"
 puts "Найти минимальную нечетную цифру числа."
 print metod2(num), "\n"
+puts "Найти сумму всех делителей числа, взаимно простых с суммой
+цифр числа и не взаимно простых с произведением цифр числа."
+print metod3(num), "\n"
