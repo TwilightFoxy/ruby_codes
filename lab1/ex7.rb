@@ -60,7 +60,28 @@ def metod1(num)
 	return kol
 end
 
+def metod2(num)
+	a = num.to_i
+	min = 10
+	while a != 0
+		b = a % 10
+		if b % 2 == 1
+			if min > b then
+				min = b
+			end
+		end
+		a /= 10
+	end
+	unless min == 10
+		return min
+	else 
+		return 0
+	end
+end
+
 puts "Введите число: "
 num = gets.chomp
 puts "Найти количество делителей числа, не делящихся на 3."
 print metod1(num), "\n"
+puts "Найти минимальную нечетную цифру числа."
+print metod2(num), "\n"
