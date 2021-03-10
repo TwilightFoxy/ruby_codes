@@ -7,15 +7,11 @@ def array_max(arr)
 end
 
 def array_sum(arr)
-	sum = 0
-	arr.each {|a| sum += a.to_i}
-	return sum
+	return arr.sum
 end
 
 def array_mult(arr)
-	mult = 1
-	arr.each {|a| mult *= a.to_i}
-	return mult
+	return arr.reduce(1,:*)
 end
 
 def add_in_end(arr, elem)
@@ -70,6 +66,19 @@ def zad23(arr)
 	print a, " ", b,"\n"
 end
 
+def zad35(arr, chislo)
+	ch = 0
+	razn = (chislo.to_i - arr[0].to_i).abs
+	for elem in arr
+		ab = (chislo.to_i - elem.to_i).abs
+		if ab < razn
+			razn = ab
+			ch = elem
+		end
+	end
+	return ch
+end
+
 array = Array.new(0) 
 input = ARGV[0].to_i
 case input
@@ -83,13 +92,13 @@ case input
 			a = $stdin.gets.chomp
 			if a != "0"
 				a.to_i
-				array = add_in_end(array,a)
+				array = add_in_end(array, a)
 			end
 		end
 end
 #
+puts "11|23|35|47|59"
 inp = $stdin.gets.chomp.to_i
-
 case inp
 when 11
 	zad11(array)
@@ -97,6 +106,10 @@ when 11
 when 23
 	zad23(array)
 when 35
+	print array, "\n"
+	ch = $stdin.gets.chomp.to_i
+	ch = zad35(array, ch)
+	print ch, "\n"
 when 47
 when 59
 end
