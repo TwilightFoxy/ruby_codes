@@ -48,6 +48,7 @@ while a != "0"
 		arr = add_in_end(arr,a)
 	end
 end
+ы
 
 print arr, "\n"
 print array_min(arr), " - минимум\n"
