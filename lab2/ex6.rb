@@ -63,6 +63,13 @@ def zad11(arr)
 	end
 end
 
+def zad23(arr)
+	a = arr.min
+	arr.delete(a)
+	b = arr.min
+	print a, " ", b,"\n"
+end
+
 array = Array.new(0) 
 input = ARGV[0].to_i
 case input
@@ -88,7 +95,7 @@ when 11
 	zad11(array)
 	print array
 when 23
-
+	zad23(array)
 when 35
 when 47
 when 59
