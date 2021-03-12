@@ -79,6 +79,20 @@ def zad35(arr, chislo)
 	return ch
 end
 
+def zad47(arr)
+	deliteli = Array.new(0) 
+	for elem in arr
+		max = (elem.to_i / 2)+1
+		for i in 1..max
+			if elem.to_i % i == 0
+				deliteli.push(i)
+			end
+		end
+	end
+	deliteli = deliteli.uniq
+	print deliteli
+end
+
 array = Array.new(0) 
 input = ARGV[0].to_i
 case input
@@ -111,5 +125,6 @@ when 35
 	ch = zad35(array, ch)
 	print ch, "\n"
 when 47
+	zad47(array)
 when 59
 end
