@@ -93,6 +93,25 @@ def zad47(arr)
 	print deliteli
 end
 
+<<<<<<< HEAD
+def zad59(arr)
+	array = Array.new(0) 
+	arr.each { |a| 
+		z = 0
+		arr.each { |i|
+			if i.to_i == a.to_i
+				z += 1
+			end
+			}
+		if z > 1 and a.to_i > 0 and a.to_i < 100
+			array.push(a.to_i*a.to_i)
+		end
+	}
+	return array.uniq
+end
+
+=======
+>>>>>>> main
 array = Array.new(0) 
 input = ARGV[0].to_i
 case input
@@ -127,4 +146,6 @@ when 35
 when 47
 	zad47(array)
 when 59
+	p = zad59(array)
+	print p, "\n"
 end
