@@ -42,6 +42,7 @@ end
 
 def zad11(arr)
 	a = arr.min
+	b = arr.max
 	aa = 0
 	bb = 0
 	for elem in arr
