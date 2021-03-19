@@ -4,6 +4,6 @@ def read_from_file()
 	return config
 end
 
-a = read_from_file().split("\n")
+a = read_from_file().split(" ")
 a = a.sort_by{|e| e.size}
 print a
