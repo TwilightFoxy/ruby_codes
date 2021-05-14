@@ -1,4 +1,4 @@
-def array_min(arr)
+def arr_min(arr)
 	min = arr[0]
 	for i in arr
 		if i<min 
@@ -8,17 +8,17 @@ def array_min(arr)
 	return min
 end
 
-def array_max(arr)
-	max = arr[0]
+def arr_max(arr)
+	max = arr[0].to_i
 	for i in arr
-		if i>max 
-			max = i
+		if i.to_i>max 
+			max = i.to_i
 		end
 	end
 	return max
 end
 
-def array_sum(arr)
+def arr_sum(arr)
 	sum = 0
 	for i in arr
 		sum += i.to_i
@@ -26,7 +26,7 @@ def array_sum(arr)
 	return sum
 end
 
-def array_mult(arr)
+def arr_mult(arr)
 	sum = 1
 	for i in arr
 		sum *= i.to_i
@@ -41,13 +41,13 @@ while a != "0"
 	a = gets.chomp
 	if a != "0"
 		a.to_i
-		arr_sub = Array[a]
-		arr = arr + arr_sub
+		arr = arr + Array[a]
 	end
 end
 
 print arr, "\n"
-print array_min(arr), " - минимум\n"
-print array_max(arr), " - максимум\n"
-print array_sum(arr), " - сумма\n"
-print array_mult(arr), " - произведение\n"
+print arr_sum(arr), " - сумма\n"
+print arr_mult(arr), " - произведение\n"
+print arr_min(arr), " - минимум\n"
+print arr_max(arr), " - максимум\n"
+

@@ -1,18 +1,18 @@
-def array_min(arr)
+def arr_min(arr)
 	return arr.min
 end
 
-def array_max(arr)
+def arr_max(arr)
 	return arr.max
 end
 
-def array_sum(arr)
+def arr_sum(arr)
 	sum = 0
 	arr.each {|a| sum += a.to_i}
 	return sum
 end
 
-def array_mult(arr)
+def arr_mult(arr)
 	mult = 1
 	arr.each {|a| mult *= a.to_i}
 	return mult
@@ -47,17 +47,16 @@ end
 input = ARGV[0].to_i
 case input
 when 1
-	array = read_from_file().split(' ')
+	arr = read_from_file().split(' ')
 when 2
 	a = 1
-	array = Array.new(0) 
+	arr = Array.new(0) 
 	while a != "0"
 		a = gets.chomp
 		if a != "0"
-			a.to_i
-			array = add_in_end(array,a)
+			arr = add_in_end(arr,a.to_i)
 		end
 	end
 end
 #
-print array
+print arr

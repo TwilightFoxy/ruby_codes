@@ -1,16 +1,16 @@
-def array_min(arr)
+def arr_min(arr)
 	return arr.min
 end
 
-def array_max(arr)
+def arr_max(arr)
 	return arr.max
 end
 
-def array_sum(arr)
+def arr_sum(arr)
 	return arr.sum
 end
 
-def array_mult(arr)
+def arr_mult(arr)
 	return arr.reduce(1,:*)
 end
 
@@ -109,8 +109,7 @@ def zad59(arr)
 	return array.uniq
 end
 
-=======
->>>>>>> main
+
 array = Array.new(0) 
 input = ARGV[0].to_i
 case input

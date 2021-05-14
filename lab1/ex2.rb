@@ -1,3 +1,1 @@
-for arg in ARGV
-   puts "Привет #{arg} !"
-end
+puts "Привет #{ARGV[0]} !"

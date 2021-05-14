@@ -107,7 +107,7 @@ end
 
 
 input_command = gets.chomp
-case period
+case input_command
 	when "summ"
 		a = gets.chomp
 		print "Сумма цифр числа: ", summ_of_num(a),"\n"
@@ -134,3 +134,4 @@ case period
 		puts "Команды: summ, mult, min, max, m1, m2, m3"
 	else
 		puts "Hello World!"
+	end

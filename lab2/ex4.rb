@@ -1,18 +1,18 @@
-def array_min(arr)
+def arr_min(arr)
 	return arr.min
 end
 
-def array_max(arr)
+def arr_max(arr)
 	return arr.max
 end
 
-def array_sum(arr)
+def arr_sum(arr)
 	sum = 0
 	arr.each {|a| sum += a.to_i}
 	return sum
 end
 
-def array_mult(arr)
+def arr_mult(arr)
 	mult = 1
 	arr.each {|a| mult *= a.to_i}
 	return mult
@@ -44,5 +44,5 @@ def read_from_file()
 	return config
 end
 
-array = read_from_file().split(' ')
-print array
+arr = read_from_file().split(' ')
+print arr

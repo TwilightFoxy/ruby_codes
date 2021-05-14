@@ -13,6 +13,12 @@ class Employee
 		self.doljnost=doljnost
 		self.lastmoney=lastmoney
 	end
+<<<<<<< Updated upstream
 
 	
 end 
+=======
+end 
+
+puts Employee.new(1,1,1,1,1,1,1,1,1,1)
+>>>>>>> Stashed changes
