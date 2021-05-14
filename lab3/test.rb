@@ -7,11 +7,26 @@ class TestEmployee
 		@list << Employee.new("Короновирус", "17.10.2019", "88005553535", "Где-то в Китае...", "mvideo@mail.ru", "1234 123456", "должность2", 12, "Мвидео", "Директор", 99999.99)
 	end
 
+	def first
+		@list.first
+	end
+
 	def to_s
 		@list.reduce([]){|a, b| a << b.to_s}.join("\n")
 	end
 end
 
-
 test = TestEmployee.new
+##2
 puts test
+puts ''
+##3
+puts test.first.phone
+puts ''
+##4
+puts test.first.email
+puts ''
+##5
+#puts test.first.fio
+#puts ''
+##6
